@@ -89,3 +89,33 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: music
+  examples: |
+   - I am listening music.
+   - I like music.
+   - instrument
+   - sound
+   - singer
+   - voice
+   - gig
+   - guitar
+   - rap
+   - piano
+   - rock
+   - metal
+   - classical
+   - Mozart
+   - Metallica
+   - Iron Maiden
+   - Orelsan
+   - Eminem
+   - Dua Lipa
+   - Adele
+   - advice
+   - conservatory
+   - score
+   - band
+   - music
+   - sing
+   - musical

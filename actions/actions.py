@@ -14,6 +14,10 @@ from rasa_sdk.executor import CollectingDispatcher
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
+client_app = 'aeeb153629c446a6a68c94b210d20e8f'
+client_secret =  'ebec64e9a1064060b381f3c576d04387'
+
+
 class ActionHelloWorld(Action):
 
     def name(self) -> Text:
@@ -27,16 +31,12 @@ class ActionHelloWorld(Action):
 
         return []
 
-client_app = 'aeeb153629c446a6a68c94b210d20e8f'
-client_secret =  'ebec64e9a1064060b381f3c576d04387'
-
-
-
+'''
 
 class ActionConnectSpotify(Action):
 
     def name(self) -> Text:
-        return "action_hello_world" #
+        return "action_connect_spotify"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -54,7 +54,8 @@ class ActionConnectSpotify(Action):
             print(idx, track['name'])
 
 
-        dispatcher.utter_message(text="Hello World!")
+        dispatcher.utter_message(text=results['tracks']['items'][0]['name'])
 
         return []
 
+'''

@@ -28,3 +28,22 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: music path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: music
+  - action: music_form
+  - active_loop: music_form
+  - action: action_connect_spotify
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+
+
+- story: happy_path_music
+  steps:
+  - intent: affirm
+  - action: music_form
+  - active_loop: music_form
