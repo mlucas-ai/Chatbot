@@ -1,0 +1,269 @@
+[
+    {
+        "config": {
+            "store_entities_as_slots": "True"
+        },
+        "session_config": {
+            "session_expiration_time": 60,
+            "carry_over_slots_to_new_session": "True"
+        },
+        "intents": [
+            {
+                "test": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "greet": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "goodbye": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "affirm": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "deny": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "mood_great": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "mood_unhappy": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "bot_challenge": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "listen_music": {
+                    "use_entities": "True"
+                }
+            },
+            {
+                "supply_spotify_info": {
+                    "use_entities": "True"
+                }
+            }
+        }
+    ],
+    "entities": [
+        "pseudo"
+    ],
+    "slots": {
+        "pseudo": {
+            "type": "rasa.shared.core.slots.TextSlot",
+            "initial_value": "None",
+            "influence_conversation": "True",
+            "mappings": [
+                {
+                    "type": "from_entity",
+                    "entity": "pseudo"
+                }
+            ]
+        }
+    },
+    "responses": {
+        "utter_ask_music": [
+            {
+                "text": "Would you like me to play you a song?"
+            }
+        ],
+        "utter_greet": [
+            {
+                "text": "Hey! How are you?"
+            }
+        ],
+        "utter_cheer_up": [
+            {
+                "text": "Here is something to cheer you up:",
+                "image": "https://i.imgur.com/nGF1K8f.jpg"
+            }
+        ],
+        "utter_did_that_help": [
+            {
+                "text": "Did that help you?"
+            }
+        ],
+        "utter_happy": [
+            {
+                "text": "Great, carry on!"
+            }
+        ],
+        "utter_goodbye": [
+            {
+                "text": "Bye"
+            }
+        ],
+        "utter_iamabot": [
+            {
+                "text": "I am a bot, powered by Rasa."
+            }
+        ],
+        "utter_ask_for_spotify_info": [
+            {
+                "text": "Music! I love it! Give me your spotify username, I'll play some song you like :D"
+            }
+        ],
+        "utter_acknowledge_spotify_info": [
+            {
+                "text": "Well... Hello, {pseudo} ;)"
+            }
+        ]
+    },
+    "actions": [
+        "action_give_music",
+        "action_test",
+        "action_hello_world",
+        "utter_happy"
+    ],
+    "forms": {},
+    "e2e_actions": []
+},
+{
+    "config": {
+        "store_entities_as_slots": "True"
+    },
+    "session_config": {
+        "session_expiration_time": 60,
+        "carry_over_slots_to_new_session": "True"
+    },
+    "intents": [
+        {
+            "test": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "greet": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "goodbye": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "affirm": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "deny": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "mood_great": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "mood_unhappy": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "bot_challenge": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "listen_music": {
+                "use_entities": "True"
+            }
+        },
+        {
+            "supply_spotify_info": {
+                "use_entities": "True"
+            }
+        }
+    ],
+    "entities": [
+        "pseudo"
+    ],
+    "slots": {
+        "pseudo": {
+            "type": "rasa.shared.core.slots.TextSlot",
+            "initial_value": "None",
+            "influence_conversation": "True",
+            "mappings": [
+                {
+                    "type": "from_entity",
+                    "entity": "pseudo"
+                }
+            ]
+        }
+    },
+    "responses": {
+        "utter_ask_music": [
+            {
+                "text": "Would you like me to play you a song?"
+            }
+        ],
+        "utter_greet": [
+            {
+                "text": "Hey! How are you?"
+            }
+        ],
+        "utter_cheer_up": [
+            {
+                "text": "Here is something to cheer you up:",
+                "image": "https://i.imgur.com/nGF1K8f.jpg"
+            }
+        ],
+        "utter_did_that_help": [
+            {
+                "text": "Did that help you?"
+            }
+        ],
+        "utter_happy": [
+            {
+                "text": "Great, carry on!"
+            }
+        ],
+        "utter_goodbye": [
+            {
+                "text": "Bye"
+            }
+        ],
+        "utter_iamabot": [
+            {
+                "text": "I am a bot, powered by Rasa."
+            }
+        ],
+        "utter_ask_for_spotify_info": [
+            {
+                "text": "Music! I love it! Give me your spotify username, I'll play some song you like :D"
+            }
+        ],
+        "utter_acknowledge_spotify_info": [
+            {
+                "text": "Well... Hello, {pseudo} ;)"
+            }
+        ]
+    },
+    "actions": [
+        "action_give_music",
+        "action_test",
+        "action_hello_world",
+        "utter_happy"
+    ],
+    "forms": {},
+    "e2e_actions": []
+}
+]

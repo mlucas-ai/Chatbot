@@ -1,0 +1,62 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - music
+
+actions:
+  - action_hello_world
+  - action_connect_spotify
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_music:
+  - text: "Hello ! I am a music bot. Do you want music ?"
+
+  utter_welcome:
+  - text: "Hello ! I am a music bot. Do you want to talk about music ?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+entities:
+  - music
+
+slots:
+  favorite_music:
+    type: text
+    mappings:
+    - type: from entity
+      entity: music
+    - active_loop: music_form
+      requested_slot: favorite_music
+
+forms:
+  music_form:
+    required_slots:
+      - favorite_music

@@ -1,0 +1,4 @@
+2021-12-08 10:01:12,633 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2021-12-08 10:01:13,943 [INFO ]  Loading model ./models/music_bot.tar.gz...
+2021-12-08 10:01:22,454 [INFO ]  Rasa server is up and running.
+2021-12-08 10:02:12,850 [INFO ]  Killing Sanic server now.
