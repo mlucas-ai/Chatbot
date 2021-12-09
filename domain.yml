@@ -20,7 +20,7 @@ responses:
   utter_ask_music:
   - text: Music! I love it! Would you like me to play a song?
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey ! I am a bot music. Do you like music ?
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -36,6 +36,10 @@ responses:
   - text:  Give me an artist and I'll play one of its songs :D
   utter_acknowledge_spotify_info:
   - text: Let's go for some {artist} ;)
+  utter_test:
+  - text: Then give me your favorite artist !
+  utter_test_when_deny:
+  - text: Sorry, but I am only a bot music ! Would you like to give me one of your favorist artist ?
 
 actions:
 - action_give_music

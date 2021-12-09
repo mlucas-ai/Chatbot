@@ -17,11 +17,29 @@ rules:
   - intent: test
   - action: action_test
 
-- rule: Activate From
+- rule: Ask Form
   steps:
-  - intent: listen_music
+  - intent: greet
+  - action: utter_greet
+
+- rule: Redirect Form #permet de rediriger l'utilisateur vers le form même quand il veut pas de musique
+  steps:
+  - intent: deny
+  - action: utter_test_when_deny
+  
+# - rule: Activate Form
+#   steps:
+#   - intent: listen_music
+#   - action: artist_form
+#   - active_loop: artist_form
+
+- rule: Activate Form
+  steps:
+  - intent: affirm
+  - action: utter_happy
   - action: artist_form
   - active_loop: artist_form
+
 
 - rule: Deactivate Form
   condition:

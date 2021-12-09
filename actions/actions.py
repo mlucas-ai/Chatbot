@@ -46,7 +46,7 @@ class ActionGetMusic(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        limit = 100
+        limit = 10rs
         artist = tracker.get_slot('artist')
         results = sp.search(q=artist, limit=limit)
 
