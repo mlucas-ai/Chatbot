@@ -1,0 +1,176 @@
+version: "3.0"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: supply_artist
+  examples: |
+    - I love the artist [AC/DC](artist).
+    - I want to hear some [Weezer](artist).
+    - artist: [daft punk](artist)
+    - artist: [Totorro](artist)
+    - artist: [Cage The Elephant](artist)
+    - artist: [The Offspring](artist)
+    - artist: [The Black Keys](artist)
+    - artist: [Franz Ferdinand](artist)
+    - artist: [Nirvana](artist)
+    - artist: [Queen of the Stone Age](artist)
+    - artist: [Cake](artist)
+    - artist: [Led Zeppelin](artist)
+    - Yeah sure. Play some [RHCP](artist).
+    - [Muse](artist)
+    - [something](artist)
+    - [radiohead](artist)
+    - [Pixies](artist)
+    - [Madness](artist)
+    - [Queen](artist)
+    - [Incubus](artist)
+    - [Metallica](artist)
+    - [Primus](artist)
+    - [Dua Lipa](artist)
+    - [Angèle](artist)
+    - [Eminem](artist)
+    - [Shakira](artist)
+    - [Britney Spears](artist)
+    - [Beyoncé](artist)
+    - [Billie Eilish](artist)
+    - [Miley Cyrus](artist)
+    - [Black Eyed Peas](artist)
+    - [Usher](artist)
+    - [Rihanna](artist)
+    - [Pitbul](artist)
+    - [50 cent](artist)
+    - [Green Day](artist)
+    - [Sum 41](artist)
+    - [Imagine Dragons](artist)
+    - [Twenty One Pilots](artist)
+    - [Ariana Grande](artist)
+    - [Lady Gaga](artist)
+    - [Sia](artist)
+    - [Diplo](artist)
+    - [Drake](artist)
+    - [Taylor Swift](artist)
+    - [Katie Perry](artist)
+    - [Martin Garrix](artist)
+    - [Muse](artist)
+
+- intent: listen_music
+  examples: |
+    - I want to listen to music
+    - I love the bass.
+    - Guitare sucks!
+    - It's all about that bass!
+    - Do you know Spotify?
+    - I like jazz!
+    - What genre of music do you like?
+    - play me a sound?
+    - Do you have any music?
+    - What are your taste in music?
+    - Do you like listening to music?
+    - music
+
+- intent: no_music
+  examples: |
+    - I don't like music!
+    - Well that's unfortunate, I don't like music
+    - I'm sorry but that's not gonna work for me
+    - There are more important things in life than music
+    - You're useless then
+    - Go away then
+    - I don't like your purpose
+    - Can you do anything else?
+    - What else can you do?
+    - Do you have any other functionality?
+    - I'm not sure this can help
+    - You're not helping here
+    - Is this the real life?
+    - Or is it just fantasy?

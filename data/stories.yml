@@ -1,0 +1,19 @@
+version: "3.0"
+
+stories:
+
+- story: music happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: listen_music
+  - action: artist_form
+  - active_loop: artist_form
+
+- story: music unhappy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: no_music
+  - action: utter_only_music
+  - action: utter_goodbye

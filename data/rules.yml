@@ -1,0 +1,26 @@
+version: "3.0"
+
+rules:
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate Form
+  steps:
+  - intent: supply_artist
+  - action: artist_form
+  - active_loop: artist_form
+
+- rule: Deactivate Form
+  condition:
+  - active_loop: artist_form
+  steps:
+  - action: artist_form
+  - active_loop: null
+  - action: utter_acknowledge_artist
+  - action: action_give_music
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye

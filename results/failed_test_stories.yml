@@ -1,0 +1,36 @@
+version: "3.0"
+stories:
+- story: happy path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+- story: say goodbye (.\tests\test_stories.yml)
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+- story: test music path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: listen_music
+  - action: utter_ask_artist  # predicted: action_listen
+  - action: artist_form
+  - active_loop: artist_form
+  - action: action_listen  # predicted: action_give_music
+  - intent: supply_artist
+    entities:
+    - artist: Metallica
+  - action: artist_form  # predicted: action_listen
+  - active_loop: null
+  - action: utter_acknowledge_spotify_info  # predicted: utter_goodbye
+  - action: action_give_music  # predicted: action_listen
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: mood_great
+  - action: utter_goodbye  # predicted: action_default_fallback after action_unlikely_intent
+  - action: action_listen  # predicted: action_default_fallback

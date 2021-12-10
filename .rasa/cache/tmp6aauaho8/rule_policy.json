@@ -1,0 +1,29 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"artist_form\"}}]": "utter_acknowledge_artist",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"artist_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_acknowledge_artist\"}}]": "action_give_music",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"artist_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_acknowledge_artist\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_give_music\"}}]": "utter_did_that_help",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"artist_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_acknowledge_artist\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_give_music\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_did_that_help\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listen_music\"}}]": "utter_ask_artist",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listen_music\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_artist\"}, \"user\": {\"intent\": \"listen_music\"}}]": "artist_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listen_music\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_artist\"}, \"user\": {\"intent\": \"listen_music\"}}, {\"active_loop\": {\"name\": \"artist_form\"}, \"prev_action\": {\"action_name\": \"artist_form\"}, \"user\": {\"intent\": \"listen_music\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"utter_ask_artist\"}}, {\"active_loop\": {\"name\": \"artist_form\"}, \"prev_action\": {\"action_name\": \"artist_form\"}, \"user\": {\"intent\": \"listen_music\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "handling active loops and forms - artist_form",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - artist_form - action_listen",
+      "predicting default action with intent restart"
+    ]
+  }
+}
